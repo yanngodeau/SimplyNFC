@@ -41,13 +41,13 @@ import SimplyNFC
 let nfcManager = NFCManager()
 nfcManager.read { manager in
     // Session did become active
-    nfcManager.setMessage("👀 Place iPhone near the tag to read")
+    manager.setMessage("👀 Place iPhone near the tag to read")
 } didDetect: { manager, result in
     switch result {
     case .failure:
-        nfcManager.setMessage("👎 Failed to read tag")
+        manager.setMessage("👎 Failed to read tag")
     case .success:
-        nfcManager.setMessage("🙌 Tag read successfully")
+        manager.setMessage("🙌 Tag read successfully")
 }
 ```
 
@@ -61,13 +61,13 @@ import SimplyNFC
 let nfcManager = NFCManager()
 nfcManager.write(message: ndefMessage) { manager in
     // Session did become active
-    nfcManager.setMessage("👀 Place iPhone near the tag to be written on")
+    manager.setMessage("👀 Place iPhone near the tag to be written on")
 } didDetect: { manager, result in
     switch result {
     case .failure:
-        nfcManager.setMessage("👎 Failed to write tag")
+        manager.setMessage("👎 Failed to write tag")
     case .success:
-        nfcManager.setMessage("🙌 Tag successfully written")
+        manager.setMessage("🙌 Tag successfully written")
 }
 ```
 
