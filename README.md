@@ -33,7 +33,7 @@ github "yanngodeau/SimplyNFC"
 
 ### Read tag
 
-Reading NCFNDEFMessage from tag
+Reading `NCFNDEFMessage` from tag
 
 ```swift
 import SimplyNFC
@@ -53,7 +53,7 @@ nfcManager.read { manager in
 
 ### Write on tag
 
-Writing NFCNDEFMessage on tag
+Writing `NFCNDEFMessage` on tag
 
 ```swift
 import SimplyNFC
