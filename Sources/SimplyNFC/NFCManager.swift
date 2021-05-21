@@ -28,8 +28,8 @@ open class NFCManager: NSObject {
     // MARK: - Functions
 
     /// Starts reading NFC tag
-    /// - Parameter didBecomeActive: Gets called when the reader has started reading
-    /// - Parameter didDetect: Gets called when the reader detects NFC tag or occurs some errors
+    /// - Parameter didBecomeActive: Gets called when the manager has started reading
+    /// - Parameter didDetect: Gets called when the manager detects NFC tag or occurs some errors
     open func read(didBecomeActive: DidBecomeActive? = nil, didDetect: @escaping DidDetect) {
         guard NFCNDEFReaderSession.readingAvailable else {
             self.didDetect?(self, .failure(.unavailable))
@@ -44,8 +44,8 @@ open class NFCManager: NSObject {
 
     /// Starts writing on NFC tag
     /// - Parameter message: The message to write
-    /// - Parameter didBecomeActive: Gets called when the reader has started reading
-    /// - Parameter didDetect: Gets called when the reader deetects NFC tag or occurs some errors
+    /// - Parameter didBecomeActive: Gets called when the manager has started writing
+    /// - Parameter didDetect: Gets called when the manager detects NFC tag or occurs some errors
     open func write(message: NFCNDEFMessage, didBecomeActive: DidBecomeActive? = nil, didDetect: @escaping DidDetect) {
         guard NFCNDEFReaderSession.readingAvailable else {
             self.didDetect?(self, .failure(.unavailable))
