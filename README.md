@@ -25,7 +25,7 @@ github "yanngodeau/SimplyNFC"
 
 1. Put SimplyNFC repo somewhere in your project directory.
 2. In Xcode, add `SimplyNFC.xcodeproj` to your project
-3. On your app's target, add the SwiftMessages framework:
+3. On your app's target, add the SimplyNFC framework:
    1. as an embedded binary on the General tab.
    2. as a target dependency on the Build Phases tab.
 
