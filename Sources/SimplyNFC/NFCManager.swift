@@ -20,8 +20,8 @@ open class NFCManager: NSObject {
     // MARK: - Properties
 
     open private(set) var session: NFCNDEFReaderSession?
-    var didBecomeActive: DidBecomeActive?
-    var didDetect: DidDetect?
+    private var didBecomeActive: DidBecomeActive?
+    private var didDetect: DidDetect?
     private var sessionConnect = NFCNDEFReaderSession.connect
     private var action: NFCAction?
 
