@@ -48,6 +48,7 @@ nfcManager.read { manager in
         manager.setMessage("👎 Failed to read tag")
     case .success:
         manager.setMessage("🙌 Tag read successfully")
+   }
 }
 ```
 
@@ -68,6 +69,7 @@ nfcManager.write(message: ndefMessage) { manager in
         manager.setMessage("👎 Failed to write tag")
     case .success:
         manager.setMessage("🙌 Tag successfully written")
+   }
 }
 ```
 
